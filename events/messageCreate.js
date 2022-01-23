@@ -21,11 +21,11 @@ module.exports = {
         let member = message.member 
 
         if (command.devOnly && !owners.includes(member.id)){
-            return message.reply("This command is only available to the bot owners")
+            return message.reply("Comando apenas para desenvolvedores do bot")
         }
 
         if (command.permissions && member.permissions.missing(command.permissions).length !== 0){
-            return message.reply("You do not have permission to use this command")
+            return message.reply("Você não tem permissão para usar esse comando")
         }
 
         try {

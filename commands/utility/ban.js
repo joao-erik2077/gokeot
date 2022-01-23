@@ -1,7 +1,7 @@
 module.exports = {
     name: "ban",
     category: "utility",
-    permissions: [],
+    permissions: ["934637943702835310"],
     devOnly: false,
     run: async ({client, message, args}) => {
         const user = message.mentions.members.first()
