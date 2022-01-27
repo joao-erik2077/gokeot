@@ -1,7 +1,7 @@
 const Canvas = require("canvas")
 const Discord = require("discord.js")
 
-const background = "https://i.imgur.com/zvWTUVu.jpg"
+const background = "https://img.wallpapic-br.com/i8122-445-729/medium/galaxia-espaco-sideral-universo-nebulosa-imagem-de-fundo.jpg"
 
 const dim = {
     height: 675,
