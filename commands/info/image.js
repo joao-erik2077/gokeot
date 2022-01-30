@@ -7,6 +7,7 @@ const google = new Scraper({
 
 module.exports = {
     name: "image",
+    description: "Pesquisa uma imagem na internet",
     category: "info",
     permissions: [],
     devOnly: false,

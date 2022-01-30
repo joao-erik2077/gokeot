@@ -1,5 +1,6 @@
 module.exports = {
     name: "ban",
+    description: "Usado para banir um usuário",
     category: "utility",
     permissions: ["934637943702835310"],
     devOnly: false,

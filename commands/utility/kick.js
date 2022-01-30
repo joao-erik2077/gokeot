@@ -1,5 +1,6 @@
 module.exports = {
     name: "kick",
+    description: "Usado para kickar um usuário",
     category: "utility",
     permissions : ["934637943702835310"],
     devOnly: false,

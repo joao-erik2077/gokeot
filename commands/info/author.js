@@ -2,6 +2,7 @@ const { MessageEmbed, Channel } = require("discord.js")
 
 module.exports = {
     name: "author",
+    description: "Exibe informações sobre o autor e sobre o projeto do bot",
     category: "info",
     permissions: [],
     devOnly: false,

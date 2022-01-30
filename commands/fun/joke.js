@@ -1,5 +1,6 @@
 module.exports = {
     name: "joke",
+    description: "Conta uma piada",
     category: "fun",
     permissions: [],
     devOnly: false,

@@ -1,10 +1,11 @@
 const { getFiles } = require("../../util/functions")
 const fs = require("fs")
-const { MessageEmbed, Channel } = require("discord.js")
+const { MessageEmbed } = require("discord.js")
 
 module.exports = {
     name: "commands",
-    category: "utility",
+    description: "Exibe uma lista com todos os comandos",
+    category: "info",
     permissions: [],
     devOnly: false,
 
@@ -21,7 +22,7 @@ module.exports = {
                     msg += `${f.split(".", 1)}\n`
                 })
             })
-            commandsEmbed.addField("Comandos",msg,false)
+            commandsEmbed.addField("Comandos",`${msg}\nUse o comando help para saber sobre um comando específico`,false)
             message.reply({embeds: [commandsEmbed]})
     }
 }

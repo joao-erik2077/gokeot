@@ -1,5 +1,6 @@
 module.exports = {
     name: "clear",
+    description: "Usado para limpar as mensagens do chat",
     category: "utility",
     permissions: ["934637943702835310"],
     devOnly: false,
