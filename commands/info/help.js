@@ -28,6 +28,9 @@ module.exports = {
                         case "utility":
                             imgURL = "http://cdn.onlinewebfonts.com/svg/img_205590.png"
                             break
+                        case "music":
+                            imgURL = "https://cdn.picpng.com/png/music-note-png-melody-64025.png"
+                            break
                         default:
                             imgURL = "https://www.pngrepo.com/png/176279/512/command-window.png"
                             break
