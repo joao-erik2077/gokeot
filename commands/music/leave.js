@@ -1,4 +1,4 @@
-const music = require('@koenie06/discord.js-music');
+const music = require('@koenie06/discord.js-music')
 
 module.exports = {
     name: "leave",

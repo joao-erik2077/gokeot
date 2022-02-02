@@ -1,4 +1,4 @@
-const music = require('@koenie06/discord.js-music');
+const music = require('@koenie06/discord.js-music')
 
 module.exports = {
     name: "play",
@@ -19,11 +19,13 @@ module.exports = {
 
         const song = args.join(" ")
 
-        music.play({
+        await music.play({
             interaction: message,
             channel: channel,
             song: song
         })
-        message.reply(`Tocando ***${song}***`)
+
+        const queueArray = await music.getQueue({interaction: message})
+        message.reply(`Tocando ***${queueArray[queueArray.length - 1].info.title}***`)
     }
 }
