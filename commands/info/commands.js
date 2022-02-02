@@ -16,11 +16,13 @@ module.exports = {
 
             let msg = ""
             fs.readdirSync("./commands/").forEach((category) => {
-                let commands = getFiles(`./commands/${category}`, ".js")
+                if (category != "dev") {
+                    let commands = getFiles(`./commands/${category}`, ".js")
                 
-                commands.forEach((f) => {
-                    msg += `${f.split(".", 1)}\n`
-                })
+                    commands.forEach((f) => {
+                        msg += `${f.split(".", 1)}\n`
+                    }) 
+                }
             })
             commandsEmbed.addField("Comandos",`${msg}\nUse o comando help para saber sobre um comando específico`,false)
             message.reply({embeds: [commandsEmbed]})

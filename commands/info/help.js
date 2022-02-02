@@ -11,7 +11,8 @@ module.exports = {
     run: async({client, message, args}) => {
 
         fs.readdirSync("./commands/").forEach((category) => {
-            let commands = getFiles(`./commands/${category}`, ".js")
+            if (category != "dev") {
+                let commands = getFiles(`./commands/${category}`, ".js")
     
             commands.forEach((f) => {
                 if (f.split(".", 1) == args[0]) {
@@ -44,6 +45,7 @@ module.exports = {
                     message.reply({embeds: [helpEmbed]})
                 }
             })
+            }
         })
     }
 }
