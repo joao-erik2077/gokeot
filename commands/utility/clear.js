@@ -1,8 +1,10 @@
+const { Permissions } = require("discord.js")
+
 module.exports = {
     name: "clear",
     description: "Usado para limpar as mensagens do chat",
     category: "utility",
-    permissions: ["934637943702835310"],
+    permissions: [Permissions.FLAGS.ADMINISTRATOR],
     devOnly: false,
     run: async ({client, message, args}) => {
         if (!args[0])

@@ -7,6 +7,10 @@ module.exports = {
     permissions: [],
     devOnly: false,
     run: async ({client, message, args}) => {
+        console.log(await music.isConnected({interaction:message}))
+        if (await music.isConnected({interaction: message}) == false)
+            return message.reply("Não estou conectado a nenhum canal")
+        
         let queueMsg = "***MÚSICAS PENDENTES***\n"
         const queueArray = await music.getQueue({interaction: message})
         //await console.log(await music.getQueue({interaction: message}))

@@ -1,8 +1,10 @@
+const { Permissions } = require("discord.js")
+
 module.exports = {
     name: "ban",
     description: "Usado para banir um usuário",
     category: "utility",
-    permissions: ["934637943702835310"],
+    permissions: [Permissions.FLAGS.BAN_MEMBERS],
     devOnly: false,
     run: async ({client, message, args}) => {
         const user = message.mentions.members.first()
