@@ -24,6 +24,6 @@ module.exports = {
             value: onOrOff
         })
 
-        return args[0] == onOrOff ? message.reply("Repetição ligada") : message.reply("Repetição desligada")
+        return onOrOff ? message.reply("Repetição ligada") : message.reply("Repetição desligada")
     }
 }
