@@ -1,0 +1,13 @@
+diff --git a/node_modules/ytdl-core/lib/index.js b/node_modules/ytdl-core/lib/index.js
+index 0cfbe5b..d959aad 100644
+--- a/node_modules/ytdl-core/lib/index.js
++++ b/node_modules/ytdl-core/lib/index.js
+@@ -42,7 +42,7 @@ ytdl.version = require('../package.json').version;
+ 
+ const createStream = options => {
+   const stream = new PassThrough({
+-    highWaterMark: (options && options.highWaterMark) || 1024 * 512,
++    highWaterMark: 1048576 * 32,
+   });
+   stream._destroy = () => { stream.destroyed = true; };
+   return stream;
