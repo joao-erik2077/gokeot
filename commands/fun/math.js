@@ -1,6 +1,6 @@
 module.exports = {
     name: "math",
-    description: "Realiza contar matematicas",
+    description: "Realiza contas matematicas",
     category: "fun",
     permissions: [],
     devOnly: false,
