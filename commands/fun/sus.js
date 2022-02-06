@@ -19,9 +19,16 @@ module.exports = {
     permissions: [],
     devOnly: false,
     run: async ({client, message, args}) => {
-        const avatarURL = message.member.user.displayAvatarURL({format: "png", dynamic: "false", size: av.size})
-        const username = message.member.user.username
-
+        const user = message.mentions.members.first()
+        let avatarURL
+        let username
+        if (!user) {
+            avatarURL = message.member.user.displayAvatarURL({format: "png", dynamic: "false", size: av.size})
+            username = message.member.user.username
+        } else {
+            avatarURL = user.displayAvatarURL({format: "png", dynamic: "false", size: av.size})
+            username = user.user.username
+        }
         const canvas = Canvas.createCanvas(dim.width, dim.height)
         const ctx  = canvas.getContext("2d")
 
