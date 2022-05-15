@@ -16,6 +16,7 @@
     "@koenie06/discord.js-music": "^1.2.9",
     "canvas": "^2.9.0",
     "discord-giveaways": "github:Androz2091/discord-giveaways#develop",
+    "discord-tts": "^1.2.1",
     "discord.js": "^13.6.0",
     "dotenv": "^14.2.0",
     "ffmpeg-static": "^4.4.1",
