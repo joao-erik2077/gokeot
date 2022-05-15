@@ -27,7 +27,8 @@ module.exports = {
             inputType: StreamType.Arbitrary,
             inlineVolume: true
         });
-        if (!voiceConnection || voiceConnection?.status === VoiceConnectionStatus.Disconnected) {
+
+        if (!voiceConnection || voiceConnection?.status === VoiceConnectionStatus.Disconnected || voiceConnection?.joinConfig.channelId !== message.member.voice.channelId) {
             voiceConnection = joinVoiceChannel({
                 channelId: message.member.voice.channelId,
                 guildId: message.guildId,
