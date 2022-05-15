@@ -23,5 +23,8 @@
     "images-scraper": "^6.4.0",
     "yt-search": "^2.10.3",
     "ytdl-core": "^4.10.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0"
   }
 }

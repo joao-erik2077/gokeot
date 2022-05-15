@@ -1,29 +1,30 @@
-const music = require('@koenie06/discord.js-music')
+const music = require('@koenie06/discord.js-music');
 
 module.exports = {
-    name: "repeat",
-    description: "Repete as músicas na queue",
-    category: "music",
-    permissions: [],
-    devOnly: false,
-    run: async ({client, message, args}) => {
-        if (await !music.isConnected({interaction: message}))
-            return message.reply("Eu não estou tocando nenhuma música")
+	name: 'repeat',
+	description: 'Repete as músicas na queue',
+	category: 'music',
+	permissions: [],
+	devOnly: false,
+	run: async ({message, args}) => {
+		if (await !music.isConnected({interaction: message}))
+			return message.reply('Eu não estou tocando nenhuma música');
 
-        if (args[0] === "on" && !await music.isRepeated({interaction: message}))
-            var onOrOff = true
-        else if (args[0] == "off" && await music.isRepeated({interaction: message}))
-            var onOrOff = false
-        else
-            return message.reply("Use gk!repeat on/off para ativar ou desativar o loop da queue")
+		let onOrOff;
+		if (args[0] === 'on' && !await music.isRepeated({interaction: message}))
+			onOrOff = true;
+		else if (args[0] == 'off' && await music.isRepeated({interaction: message}))
+			onOrOff = false;
+		else
+			return message.reply('Use gk!repeat on/off para ativar ou desativar o loop da queue');
 
         
         
-        music.repeat({
-            interaction: message,
-            value: onOrOff
-        })
+		music.repeat({
+			interaction: message,
+			value: onOrOff
+		});
 
-        return onOrOff ? message.reply("Repetição ligada") : message.reply("Repetição desligada")
-    }
-}
+		return onOrOff ? message.reply('Repetição ligada') : message.reply('Repetição desligada');
+	}
+};
