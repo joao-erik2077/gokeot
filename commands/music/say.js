@@ -21,7 +21,8 @@ module.exports = {
     permissions: [],
     devOnly: false,
     run: async ({client, message, args}) => {
-        const stream = discordTTS.getVoiceStream(args.join(" "), {lang: 'pt'});
+        const ttsMsg = `${message.member.user.username} disse ${args.join(" ")}`;
+        const stream = discordTTS.getVoiceStream(ttsMsg, {lang: 'pt'});
         const audioResource = createAudioResource(stream, {
             inputType: StreamType.Arbitrary,
             inlineVolume: true
