@@ -22,6 +22,9 @@ module.exports = {
     devOnly: false,
     run: async ({client, message, args}) => {
         const ttsMsg = `${message.member.user.username} disse ${args.join(" ")}`;
+        if (ttsMsg.length > 200) {
+            return message.reply('O tamanho máximo de caracteres é de 200');
+        }
         const stream = discordTTS.getVoiceStream(ttsMsg, {lang: 'pt'});
         const audioResource = createAudioResource(stream, {
             inputType: StreamType.Arbitrary,
